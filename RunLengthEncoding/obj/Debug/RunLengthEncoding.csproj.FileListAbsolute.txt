@@ -1,0 +1,7 @@
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\bin\Debug\RunLengthEncoding.exe.config
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\bin\Debug\RunLengthEncoding.exe
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\bin\Debug\RunLengthEncoding.pdb
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\obj\Debug\RunLengthEncoding.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\obj\Debug\RunLengthEncoding.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\obj\Debug\RunLengthEncoding.exe
+C:\Users\Home\Desktop\delete\RunLengthEncoding\RunLengthEncoding\obj\Debug\RunLengthEncoding.pdb
