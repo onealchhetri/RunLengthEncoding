@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RunLengthEncoding
 {
@@ -10,14 +8,38 @@ namespace RunLengthEncoding
     {
         static void Main(string[] args)
         {
+            #region textdata
             //string originaltext = "AAAABBBCCDAA";
-            string originaltext = "abcd";
+            //string originaltext = "OliverQueen";
+            //string originaltext = "ARrow";
+            //string originaltext = "abB  cCdD";
+            //string originaltext = "aabcddeeEEeAAABBB";
+
+            string originaltext = "AAAABBBCCDAA";
+            #endregion
+
+            #region User Input
+            //Console.Write("Enter the text for Run Length Encoding::: ");
+            //string originaltext = Console.ReadLine();
+
+            #endregion
+
+            Console.WriteLine($"Original Text::: {originaltext} \t");
+            //changing to lowercase all the letter in string
             originaltext = originaltext.ToLower();
+            //removing space if any
+            originaltext = originaltext.Replace(" ", "");
+
+
+
+            #region Variables needed
             StringBuilder encodedText = new StringBuilder();
             encodedText.Clear();
-
             int duplength = 0;
             int count ;
+            #endregion
+
+            //finding the runlength
             do
             {
                 count = 0;
@@ -26,34 +48,26 @@ namespace RunLengthEncoding
                 count++;
                 while (true)
                 {
-                    try
+
+                    if (duplength < originaltext.Length && temp == originaltext[duplength])
                     {
-                        if (duplength < originaltext.Length && temp == originaltext[duplength])
-                        {
-                            count++;
-                            duplength++;
-                        }
-                        else
-                        {
-                            encodedText.Append(count.ToString());
-                            encodedText.Append(temp);
-                            break;
-                        }
+                        count++;
+                        duplength++;
                     }
-                    catch (Exception e) { 
-                    
-                        Console.WriteLine(e.Message);
+                    else
+                    {
+                        encodedText.Append(count.ToString());
+                        encodedText.Append(temp.ToString().ToUpper());                        
                         break;
                     }
-                   
+                    
                 }
             } while (duplength <= originaltext.Length - 1);
             
 
 
-            Console.Write($"Original Text::: {originaltext} \t");
+            //Display final Answer
             Console.WriteLine($"Encoded Text::: {encodedText}");
-
             Console.Read();
         }
     }
